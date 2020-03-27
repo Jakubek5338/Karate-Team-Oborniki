@@ -1,13 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
-import Nowosci from '../components/nowosci'
-import Galeria from '../components/galeria'
-import Stronaglowna from '../components/stronaglowna'
 
-
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
 import karateLogo from '../images/logo.jpg'
 import "../../fontello-635cabf5/css/fontello.css"
+import Kalendarz from '../components/danekalendarz'
+
+
+
+
+
+
 
 
 const Menu = styled.div`
@@ -315,6 +321,7 @@ const MenuLink4 = styled.div`
   grid-column: 9 / span 2;
   grid-row: 2/ span 1;
   padding: 0px;
+  background-color: red;
 }
 @media(max-width:1199px){
   display: none;
@@ -394,53 +401,58 @@ const LogoNameLink = styled.div `
   wigth: 100%;
 }
 `
-const Content = styled.div `
+const Content = styled.div`
 @media (min-width: 1200px){
-  min-height: 70vh;
-
+  
+  
   width: 100vw;
+
 }
 @media (max-width: 1199px){
-  min-height: 80vh;
 
+  
   width: 100vw;
-  min-height: 80vh;
+
 }
+
 `
 const Footer = styled.div`
 
 box-sizing: border-box;
 border-top: 1px solid grey;
-height: §9vw;
+height: 9vw;
 display: grid;
   wight: 100vw;
   grid-template-columns: repeat(8, 12.5% );
   grid-template-rows: repeat(1, 9vw);
+  
 
 
 `
-const Container = styled.div ``;
-const ContaktOne = styled.div `
+const Container = styled.div`
+
+`
+const ContaktOne = styled.div`
 
 grid-column: 1 / span 2;
   grid-row: 1/ span 1;
 
   `
-
+  
 const ContaktTwo = styled.div `
 
 grid-column: 7 / span 2;
   grid-row: 1/ span 1;
 
-
+  
 `;
 const Autor = styled.div `
 
 grid-column: 3 / span 4;
   grid-row: 1/ span 1;
+  
 
-
-
+  
 `;
 const AutorName = styled.h1`
 @media (min-width: 1200px){
@@ -465,7 +477,7 @@ margin-left: 1vw;
 @media (max-width: 1199px){
 
   font-size: 2vw;
-
+  
   }
 `;
 
@@ -480,7 +492,7 @@ margin-right: 1vw;
 @media (max-width: 1199px){
 
   font-size: 2vw;
-
+  
   }
 
 `;
@@ -516,11 +528,6 @@ height: 1vw;
 background-color: grey;
 margin-top: 5%;
 `;
-const Galeriah = styled.div `
-  color: red;
-  text-align: center;
-  margin-top: 5vw;
-`
 const Odstemp = styled.div`
 @media(min-width: 1199px){
 height: 45vw;
@@ -555,7 +562,6 @@ height: 45vw;
 
 
 
-
 const IndexPage = () => (
 <Container>
   <Menu>
@@ -568,25 +574,24 @@ const IndexPage = () => (
     <MenuLink5><StyledLink to="/przedszkola/"><Menu5><MenuName5>Karate w przedszkolach</MenuName5></Menu5></StyledLink></MenuLink5>
     <MenuLink6><StyledLink to="/obozy/"><Menu6><MenuName6>Obozy letnie i zimowe</MenuName6></Menu6></StyledLink></MenuLink6>
     <MenuLink7><StyledLink to="/kontakt/"><Menu7><MenuName7>Kontakt</MenuName7></Menu7></StyledLink></MenuLink7>
-    <SocialMedia>
+    <SocialMedia> 
     <a href="https://www.instagram.com/karateteamoborniki/?hl=pl" target="_blank" ><i className="demo-icon icon-instagram"></i></a>
     <a href="https://www.facebook.com/karateteamoborniki/" target="_blank" ><i className="demo-icon icon-facebook"></i></a>
     <a href="https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q/videos?view=0&sort=dd&shelf_id=0" target="_blank" ><i className=" icon-youtube-play"></i></a>
     </SocialMedia>
     <Contakt><Kontakt>tel.888 585 785</Kontakt><Email>Email:</Email><EmailName>wbi@poczta.fm</EmailName></Contakt>
-    <HamburgerMenu><StyledLink to="/phone/">
+    <HamburgerMenu><StyledLink to="/phonekalendarz/">
       <HamburgerOne></HamburgerOne>
       <HamburgerTwo></HamburgerTwo>
       <HamburgerThree></HamburgerThree>
       </StyledLink></HamburgerMenu>
-
+    
   </Menu>
   <Content>
-  <Stronaglowna/>
-  <h1>Nowości</h1>
-  <Nowosci/>
-  <h1>Galeria</h1>
-  <Galeria/>
+
+
+<Kalendarz/>
+
   </Content>
   <Odstemp></Odstemp>
   <Footer>
@@ -595,8 +600,8 @@ const IndexPage = () => (
     <ContaktTwo><ContaktTwoName>Miejsce prowadzenia zajęć: <br></br>Hala gimnastyczna przy Szkole Podstawowej nr 3 ul. Czarnkowska 57, <br></br>Oborniki 64-600 oraz Sala Sportowa klubu „Justa a Fit” w Galerii Młyńska ul. Młyńska 5a, Oborniki 64-600</ContaktTwoName></ContaktTwo>
   </Footer>
   </Container>
-
-
+ 
+  
 )
 
 export default IndexPage

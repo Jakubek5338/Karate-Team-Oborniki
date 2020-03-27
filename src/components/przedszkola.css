@@ -1,0 +1,43 @@
+
+
+
+@media(min-width: 1199px) {
+.tresc {
+    width: 90vw;
+    margin-left: 5vw;
+    line-height: 150%;
+}
+h3 {
+    font-size: 2vw;
+    text-align: center;
+}
+h1 {
+    color: red;
+    font-size: 3vw;
+    text-align: center;
+}
+.tytul {
+    width: 90vw;
+    margin-left: 5vw;
+}
+}
+@media(max-width: 1199px) {
+    .tresc {
+        width: 90vw;
+        margin-left: 5vw;
+        line-height: 150%;
+    }
+    h3{
+        font-size: 4vw;
+       text-align: center;
+    }
+    h1 {
+        color: red;
+        font-size: 5vw;
+        text-align: center;
+    }
+    .tytul {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    }

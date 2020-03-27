@@ -1,13 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
-import Nowosci from '../components/nowosci'
-import Galeria from '../components/galeria'
-import Stronaglowna from '../components/stronaglowna'
 
-
+import Layout from "../components/layout"
+import Image from "../components/image"
+import SEO from "../components/seo"
 import karateLogo from '../images/logo.jpg'
 import "../../fontello-635cabf5/css/fontello.css"
+import Obozy from '../components/obozydane'
+import Galeriaoboz from '../components/galeriaobozy'
+
+
+
+
+
+
 
 
 const Menu = styled.div`
@@ -295,6 +302,7 @@ const MenuLink6 = styled.div`
   grid-column: 13 / span 2;
   grid-row: 2/ span 1;
   padding: 0px;
+  background-color: red;
 }
 @media(max-width:1199px){
   display: none;
@@ -401,7 +409,7 @@ const Content = styled.div `
   width: 100vw;
 }
 @media (max-width: 1199px){
-  min-height: 80vh;
+  min-height: 70vh;
 
   width: 100vw;
   min-height: 80vh;
@@ -516,11 +524,6 @@ height: 1vw;
 background-color: grey;
 margin-top: 5%;
 `;
-const Galeriah = styled.div `
-  color: red;
-  text-align: center;
-  margin-top: 5vw;
-`
 const Odstemp = styled.div`
 @media(min-width: 1199px){
 height: 45vw;
@@ -545,7 +548,15 @@ height: 45vw;
 
       }
 `
+const Movie = styled.div`
+@media (min-width: 800px){
+    margin-left: 20vw;
+    }
+@media (min-width: 1200px){
+margin-left: 35vw;
+}
 
+`
 
 
 
@@ -574,7 +585,7 @@ const IndexPage = () => (
     <a href="https://www.youtube.com/channel/UClowW1j40-wJWn2CBrT8g9Q/videos?view=0&sort=dd&shelf_id=0" target="_blank" ><i className=" icon-youtube-play"></i></a>
     </SocialMedia>
     <Contakt><Kontakt>tel.888 585 785</Kontakt><Email>Email:</Email><EmailName>wbi@poczta.fm</EmailName></Contakt>
-    <HamburgerMenu><StyledLink to="/phone/">
+    <HamburgerMenu><StyledLink to="/phoneobozy/">
       <HamburgerOne></HamburgerOne>
       <HamburgerTwo></HamburgerTwo>
       <HamburgerThree></HamburgerThree>
@@ -582,11 +593,12 @@ const IndexPage = () => (
 
   </Menu>
   <Content>
-  <Stronaglowna/>
-  <h1>Nowości</h1>
-  <Nowosci/>
-  <h1>Galeria</h1>
-  <Galeria/>
+
+  <Obozy/>
+  <Movie><iframe width="560" height="315" src="https://www.youtube.com/embed/EI8I0RqFWPs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Movie>
+  <Movie><iframe width="560" height="315" src="https://www.youtube.com/embed/pEGuxTcW4vc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Movie>
+  <h1>Galeria zdięć z obozów</h1>
+  <Galeriaoboz/>
   </Content>
   <Odstemp></Odstemp>
   <Footer>
